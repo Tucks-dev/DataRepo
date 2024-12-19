@@ -1,0 +1,35 @@
+Runtime Analysis
+
+Vector
+Code	Line Cost	# Times Executes	Total Cost
+For All Courses	1	n	n
+If the course is the same as courseNumber	1	n	n
+For each prerequisite of the course	1	1	1
+For each prerequisite of the course	1	n	n
+Print the prerequisite course information	1	n	n
+		Total Cost	4n + 1
+		Runtime	O(n)
+
+
+Hash Table
+Code	Line Cost	# Times Executes	Total Cost
+For All Courses	2	1	2
+If the course is the same as courseNumber	2	1	2
+For each prerequisite of the course	1	N	1
+For each prerequisite of the course	2	N	2n
+Print the prerequisite course information	4	N	4n
+		Total Cost	6n + 5
+		Runtime	O(n)
+
+Binary Search Tree
+Code	Line Cost	# Times Executes	Total Cost
+For All Courses	2	Log n	2log n
+If the course is the same as courseNumber	4	1	4
+For each prerequisite of the course	2	1	2
+For each prerequisite of the course	1	N	N
+Print the prerequisite course information	4	n	4n
+		Total Cost	2log n + 5n + 6
+		Runtime	O(log n)
+
+
+The best for searching specific courses would be a hash table, as they provide constant-time lookups, so you could quickly retrieve course details. However, for printing courses in an alphanumeric order Binary Search Trees would be better, as they naturally store data in sorted order. My final recommendation would be the binary search tree, as the primary focus is to print courses in alphanumeric order, they also have ordered data traversal, avoiding the overhead of sorting required by vectors and hash tables. Additionally, they scale well for large datasets.
